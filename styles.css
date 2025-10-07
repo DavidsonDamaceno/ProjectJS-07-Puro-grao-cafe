@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quattrocento", serif;
+}
+
+body {
+    background-color: #f0e6d6;
+    overflow-x: hidden;
+}
+
+.cafe-graos {
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    width: 80%;
+    max-width: 1500px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    opacity: 0.5;
+}
+
+.logo {
+    height: 50px;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.produto-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.expresso {
+    height: 200px;
+}
+
+.expresso:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+.latte {
+    height: 200px;
+}
+
+.latte:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+.mocha {
+    height: 200px;
+    margin-right: 20px;
+}
+
+.mocha:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+
+
+#btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+    margin-top: 12px;
+}
+
+.cafe {
+    display: block;
+    width: 24px;
+    border-top: 3px solid #333;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.cafe::before,
+.cafe::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+.cafe::before {
+    top: -8px;
+}
+
+.cafe::after {
+    bottom: -8px;
+}
+
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(25, 25, 25, 0.95);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    padding: 1.5rem;
+}
+
+.menu-list a:hover {
+    background-color: #007bff;
+}
+
+
+header.menu-aberto #menu {
+    transform: translateX(0);
+}
+
+header.menu-aberto .cafe {
+    border-top-color: transparent;
+}
+
+header.menu-aberto .cafe::before {
+    transform: rotate(135deg);
+    top: 0;
+}
+
+header.menu-aberto .cafe::after {
+    transform: rotate(-135deg);
+    bottom: -1px;
+}
+
+
+header.menu-aberto .cafe::before,
+header.menu-aberto .cafe::after {
+    background-color: #fff;
+}
+
+header {
+    position: relative;
+    z-index: 102;
+    background-color: rgba(139, 69, 19, 0.589);
+    padding: 10px 20px;
+    height: 60px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 60px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.home {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    padding: 0 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #000000;
+    border: 2px solid #0000008a;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sobre {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    padding: 0 20px;
+}
+
+.produtos {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    padding: 0 20px;
+}
+
+.contato {
+    background-color: rgba(139, 69, 19, 0.589);
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    padding: 50px;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#nome {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #0000008a;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#email {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #0000008a;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#mensagem {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #0000008a;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.redes-sociais {
+    padding: 20px;
+    display: flex;
+    height: 100px;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.whatsapp {
+    height: 85px;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+.instagram {
+    height: 65px;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+.facebook {
+    height: 52px;
+}
+
+.facebook:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+.x {
+    height: 77px;
+}
+
+.x:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease in-out;
+    cursor: pointer;
+    animation-delay: 0.3s;
+}
+
+
+
+.produto-item img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+.texto-escondido {
+    display: none;
+    margin-top: 15px;
+    font-size: 25px;
+    color: #333;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.texto-escondido.visivel {
+    display: block;
+}
+
+@media(max-width: 1200px) {
+
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .produtos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .expresso {
+        height: 150px;
+    }
+
+    .latte {
+        height: 150px;
+    }
+
+    .mocha {
+        height: 150px;
+    }
+
+    .produto-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        line-height: 55px;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .menu-list {
+        align-items: flex-start;
+        margin-left: 115px;
+    }
+
+    .redes-sociais {
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp {
+        height: 70px;
+    }
+
+    .instagram {
+        height: 50px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .facebook {
+        height: 40px;
+        margin-top: 13px;
+        margin-right: 15px;
+    }
+
+    .x {
+        height: 55px;
+        margin-top: 5px;
+    }
+
+}

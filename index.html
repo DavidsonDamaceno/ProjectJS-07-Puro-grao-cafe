@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="assets/Café logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <title>Puro Grão Café</title>
+</head>
+
+<body>
+    <img src="./assets/Café em grãos.png" alt="grãos de café" class="cafe-graos">
+
+
+
+    <header>
+
+
+
+        <img src="./assets/Café logo.png" alt="logo do puro grão café" class="logo">
+
+        <button id="btn-menu" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span class="cafe"></span>
+        </button>
+
+
+
+        <nav id="menu" role="navigation">
+            <ul class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <h1>Bem-vindo ao Puro Grão Café</h1>
+        <p>Descubra o sabor autêntico do café artesanal.</p>
+        <a href="#produtos" class="btn">Ver Produtos</a>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>No Puro Grão Café, somos apaixonados por café de alta qualidade. Selecionamos os melhores grãos e
+            torramos com cuidado para garantir uma experiência única a cada xícara.</p>
+    </section>
+
+    <section id="produtos" class="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="produto-lista">
+            <div class="produto-item">
+
+                <img src="./assets/Xícara café.png" alt="Café Expresso" class="expresso">
+                <h3>Café Expresso:</h3>
+                <p>Intenso e encorpado, perfeito para quem ama um café forte.</p>
+
+                <p class="texto-escondido">A história do café se inicia na Etiópia, onde a lenda de Kaldi, o pastor que
+                    observou suas cabras ficarem mais agitadas após comer os frutos de um arbusto, é um marco. O café se
+                    espalhou para a Europa e Ásia através de missionários, com o Iêmen se tornando um centro de cultivo
+                    e exportação. No Brasil, a planta foi introduzida em 1727, e o ciclo do café se tornou fundamental
+                    para a economia e a sociedade, influenciando a economia e a imigração no país. </p>
+            </div>
+
+            <div class="produto-item">
+                <img src="./assets/Xícara café latte.png" alt="Café Latte" class="latte">
+                <h3>Café Latte:</h3>
+                <p>Suave e cremoso, ideal para um momento de relaxamento.</p>
+
+                <p class="texto-escondido">A origem do latte moderno é uma evolução do caffè latte italiano, que era
+                    simplesmente "café com leite" para o desjejum. A versão que conhecemos hoje, com expresso e leite
+                    vaporizado e espuma, desenvolveu-se nos Estados Unidos a partir da década de 1980, especialmente em
+                    Seattle, onde imigrantes italianos adaptaram as bebidas tradicionais para o paladar americano. </p>
+            </div>
+            <div class="produto-item">
+                <img src="./assets/Café mocha.png" alt="Café Mocha" class="mocha">
+                <h3>Café Mocha:</h3>
+                <p>Uma deliciosa combinação de café e chocolate.</p>
+
+                <p class="texto-escondido">A origem do nome "mocha" vem da cidade portuária do Iêmen, chamada Al Mokka
+                    (ou Moca), que entre os séculos XV e XVII foi um importante centro do comércio mundial de grãos de
+                    café, conhecidos por seu sabor naturalmente achocolatado. Embora o grão de mocha iemenita tenha um
+                    toque de chocolate, a bebida mocha moderna, que combina café, chocolate e leite, foi criada nos
+                    Estados Unidos, inspirada por uma bebida italiana. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+
+        <form action="#" method="post" class="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem"></label>
+            <textarea id="mensagem" name="mensagem" rows="4" required
+                placeholder="Escreva aqui sua mensagem"></textarea>
+
+            <button type="submit" class="btn" onclick="send()">Enviar</button>
+        </form>
+
+        <div class="redes-sociais">
+            <a href="https://wa.me/5511900000001?text=Help%20me%20M%C3%A1rio%20Bros.%20!"> <img
+                    src="./assets/whatsapp-logo-png..webp" alt="logo-whatsapp" class="whatsapp"></a>
+
+            <a href="https://www.instagram.com/"> <img src="./assets/instagram-logotipo_200.png" alt="logo-instagram"
+                    class="instagram"></a>
+
+            <a href="https://www.facebook.com/"> <img src="./assets/icone-do-facebook.png" alt="logo-facebook"
+                    class="facebook"></a>
+
+            <a href="https://x.com/"> <img src="./assets/icone-do-logotipo-x200.png" alt="logo-x" class="x"></a>
+
+        </div>
+
+
+    </section>
+
+
+</body>
+
+<script src="./scripts.js"></script>
+
+</html>
